@@ -1,6 +1,6 @@
 for ciclo in range(1):
 	def plant_cenoura():
-		blocos = 12
+		blocos = 15
 		solo_arado = Grounds.Soil
 		solo2= Grounds.Grassland
 		plantas = [Entities.Bush, Entities.Carrot, Entities.Sunflower]
@@ -13,7 +13,7 @@ for ciclo in range(1):
 					move(East)
 					
 				
-		for y in range(12):
+		for y in range(15):
 			for x in range(blocos):
 				if can_harvest():
 					harvest()
