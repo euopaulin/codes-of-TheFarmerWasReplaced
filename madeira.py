@@ -1,21 +1,30 @@
 from chapeu import chapeu
 def plantar_colheita():
-	blocos = 11
+	blocos = 15
 	madeira = Entities.Bush
 	solo_arado = Grounds.Soil
 	arvore = Entities.Tree
 	solo2 = Grounds.Grassland
+	abobora = Entities.Dead_Pumpkin
 	
 	def voltar():
-		for _ in range(blocos):
 			move(East)
 			
-	for y in range(11):
+	for y in range(15):
 		for x in range(blocos):
 			if can_harvest():
 				harvest()
 				till()
-				plant(Entities.Dead_Pumpkin)
+				plant(abobora)
+				if get_ground_type() == solo2:
+					plant(abobora)
+				elif get_ground_type() == solo_arado:
+					till()
+					till()
+					till()
+					plant(abobora)
+				else:
+					pass
 			elif get_ground_type() == solo_arado or solo2:
 				till()
 				plant(arvore)

@@ -1,7 +1,7 @@
 from chapeu import chapeu
 for ciclo in range(1):
 	def grama():
-		blocos = 12
+		blocos = 15
 		solo_arado = Grounds.Soil
 		solo2 = Grounds.Grassland
 		plantas = [Entities.Bush, Entities.Carrot, Entities.Sunflower, Entities.Pumpkin]
@@ -13,7 +13,7 @@ for ciclo in range(1):
 				else:
 					move(East)
 
-		for y in range(12):
+		for y in range(15):
 			for x in range(blocos):
 				if can_harvest():
 					harvest()
